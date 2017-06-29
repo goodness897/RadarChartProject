@@ -129,7 +129,7 @@ public class RadarChartView extends View {
     protected void onDraw(Canvas canvas) {
 
         // 차트 갯수
-        chartCount = 4;
+        chartCount = 5;
         canvas.drawCircle(widthSize / 2, heightSize / 2, widthSize / 4, circlePaint);
         for (int i = 0; i < chartCount + 1; i++) {
             drawCircleLine(canvas, widthSize / 2, heightSize / 2, (360 / chartCount) * i, i);
@@ -141,7 +141,7 @@ public class RadarChartView extends View {
 
     private void drawCircleLine(Canvas canvas, float x, float y, double angle, int position) {
 
-        float ratio[] = new float[]{0.5f, 0.6f, 0.7f, 0.4f, 0.5f};
+        float ratio[] = new float[]{0.5f, 0.6f, 0.7f, 0.4f, 0.5f, 0.5f};
         float lineLength = widthSize * 0.33f;
         float textLength = widthSize * 0.4f;
         angle = Math.toRadians(angle);
